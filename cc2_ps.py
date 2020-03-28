@@ -8,6 +8,7 @@ import bigfile
 import numpy as np
 from emcee.utils import MPIPool 
 import sys
+import os
 
 folder='/global/cscratch1/sd/jialiu/fastpm/CorrelatedSims/'
 def gen_comp(zs):
