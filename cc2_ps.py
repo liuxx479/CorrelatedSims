@@ -10,6 +10,7 @@ from emcee.utils import MPIPool
 import sys
 import os
 
+print ('START')
 folder='/global/cscratch1/sd/jialiu/fastpm/CorrelatedSims/'
 def gen_comp(zs):
     f = bigfile.File(folder+'wlen_jliu/WL-%.2f-N4096'%(zs))
