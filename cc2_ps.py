@@ -11,7 +11,7 @@ import sys
 
 folder='/global/cscratch1/sd/jialiu/fastpm/CorrelatedSims/'
 def gen_comp(zs):
-    f = bigfile.File(folder+'wlen_jliu//WL-%.2f-N1024'%(zs))
+    f = bigfile.File(folder+'wlen_jliu//WL-%.2f-N4096'%(zs))
 
     nside = f['kappa'].attrs['nside'][0] 
     zmin  = f['kappa'].attrs['zlmin'][0] 
