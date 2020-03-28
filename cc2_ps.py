@@ -26,10 +26,10 @@ def gen_comp(zs):
     lmax = min([5000,nside])#5000
     ell_sim = np.arange(lmax+1)
     print (f['kappa'][:].shape)
-    fn_cl=folder+'/clkk/kappa_cl_z%.2f.npy'%(zs)
+    fn_cl=folder+'/clkk/kappa_cl_z%.2f.npz'%(zs)
     if not os.path.isfile(fn_cl):
         cl=hp.anafast(f['kappa'][:], lmax=lmax)
-        np.save(fn_cl, ell=ell_sim, cl = cl) 
+        np.savez(fn_cl, ell=ell_sim, cl = cl) 
 
 zs=np.arange(0.1, 2.21, 0.1)
 ##### MPIPool
