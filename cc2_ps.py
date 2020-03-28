@@ -37,5 +37,5 @@ if not pool.is_master():
     pool.wait()
     sys.exit(0)
 
-out=pool.map(map, zs)
+out=pool.map(gen_comp, zs)
 pool.close()
