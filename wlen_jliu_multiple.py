@@ -280,13 +280,13 @@ ap.add_argument('--zstep', type=float, default=0.05)## default=0.5
 ap.add_argument('--nside', type=int, default=256)
 
 def main(ns):
-    #if ns.zlmax is None:
-    #    ns.zlmax = max(ns.zs)
+    if ns.zlmax is None:
+        ns.zlmax = max(ns.zs)
 
-#    zs_list = ns.zs
+    zs_list = ns.zs
     ###### JL hardcode zs_list
-    zs_list = numpy.arange(ns.zs, 2.21, 0.1)
-    #zs_list = ns.zs
+    #zs_list = numpy.arange(ns.zs, 2.21, 0.1)
+    zs_list = ns.zs
 
     zlmin = ns.zlmin
     zlmax = zs_list[-1]#ns.zlmax
