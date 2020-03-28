@@ -24,7 +24,7 @@ def gen_comp(zs):
 
     lmax = min([5000,nside])#5000
     ell_sim = np.arange(lmax+1)
-    print f['kappa'][:].shape
+    print (f['kappa'][:].shape)
     fn_cl=folder+'/clkk/kappa_cl_z%.2f.npy'%(zs)
     if not os.path.isfile(fn_cl):
         cl=hp.anafast(f['kappa'][:], lmax=lmax)
